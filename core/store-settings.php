@@ -107,7 +107,6 @@ class Store_Settings{
 	}
 
 	public function settings_form_custom_fields( $current_user, $profile_info ) {
-		$show_store_open_close    = dokan_get_option( 'store_open_close', 'dokan_appearance', 'on' );
 		$show_store_open_close    = dokan_get_option( 'doc_multislot_time_enabled', 'dokan_appearance', 'on' );
 		$dokan_days               = [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ];
 		$dokan_store_time_enabled = isset( $profile_info['dokan_store_time_enabled'] ) ? $profile_info['dokan_store_time_enabled'] : '';

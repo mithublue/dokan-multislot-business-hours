@@ -15,6 +15,7 @@ namespace DOC;
 
 use DOC\core\Store;
 use DOC\core\Store_Settings;
+use DOC\core\Widget_Actions;
 
 defined( 'ABSPATH' ) || exit;
 defined( 'DOKANOPENCLOSE_PLUGIN_URL' ) || define( 'DOKANOPENCLOSE_PLUGIN_URL', WP_PLUGIN_URL . '/' . plugin_basename( dirname( __FILE__ ) ) . '/' );
@@ -70,6 +71,7 @@ class DOC {
 
     public function __construct() {
     	Store::instance();
+    	Widget_Actions::instance();
     	Store_Settings::instance();
     }
 }

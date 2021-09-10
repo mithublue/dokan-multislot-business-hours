@@ -14,3 +14,33 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 Enable multislot business hours / multislot opening and closing times for each workday for your vendor store with this plugin.
+
+== Free and Pro Features ==
+
+* Vendor will have multiple slots for each bussness day ( Store opening day ), so that they can input multiple opening and closing time for their store
+for each day.
+
+* Automatically store status will be changed in the frontend.
+
+* Notice will appear as alert or banner in store page, if the store is closed.
+
+* Notice manager for admin panel, where admin can manage if the notice should appear on closed store and how.
+
+* Custom message for notice
+
+* Option for admin to opt for preventing users from buying products from a store when it is closed.
+
+* And more...
+
+Demo
+
+https://cybercraftit.com/demo/testwp/dokan-business-hours/
+user : test
+password: 123456
+
+== Screenshots ==
+
+1. Screenshot-1
+2. Screenshot-2
+
+
