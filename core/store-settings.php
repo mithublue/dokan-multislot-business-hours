@@ -63,6 +63,7 @@ class Store_Settings{
 	 * @param $dokan_settings
 	 */
     function save_settings_fields ( $store_id, $dokan_settings ) {
+	    $dokan_settings = dokan_get_store_info($store_id);
 		$dokan_days = [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ];
 
 		foreach ( $dokan_days as $k => $day ) {
