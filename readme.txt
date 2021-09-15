@@ -1,10 +1,10 @@
-=== Multislot Business Hours for Dokan Vendors ===
+=== Multislot Business Hours for Dokan Vendor ===
 Contributors: cybercraftit, mithublue
 Tags: Dokan, vendor open close, store open close, multislot open close, multislot business hours, multivendor, Multislot, business hours, schedules, multi vendor marketplace, multi seller store, multi-vendor, multi seller, marketplace, product vendors, woocommerce vendor, e-commerce, woocommerce
 Requires at least: 4.4
-Tested up to: 5.7.1
+Tested up to: 5.8.1
 WC requires at least: 3.0
-WC tested up to: 5.2.2
+WC tested up to: 5.6.0
 Requires PHP: 5.6
 Stable tag: 1.0
 License: GPLv2 or later
