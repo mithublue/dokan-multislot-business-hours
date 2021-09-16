@@ -39,6 +39,7 @@ class Widget_Actions {
 	    add_filter( 'dokan_widgets', [ $this, 'register_widgets' ], 10 );
     }
 	public function register_widgets( $widgets ) {
+		include_once 'StoreOpenClose.php';
 		$widgets['doc_store_open_close'] = 'DOC\core\StoreOpenClose';
 		return $widgets;
 	}
