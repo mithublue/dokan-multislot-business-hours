@@ -30,6 +30,8 @@ for each day.
 
 * Option for admin to opt for preventing users from buying products from a store when it is closed.
 
+* Option for vendor to manage notice
+
 * And more...
 
 Demo
