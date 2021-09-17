@@ -71,6 +71,7 @@ class DOC {
     }
 
     public function __construct() {
+    	register_activation_hook( __FILE__, [ $this, 'on_active' ] );
 	    add_filter( 'plugin_action_links_multislot-business-hours-for-dokan-vendor/multislot-business-hours-for-dokan-vendor.php', [ $this, 'plugin_links' ] );
     	include_once 'core/promo.php';
     	Store::instance();
@@ -80,24 +81,32 @@ class DOC {
 
 	function plugin_links( $links ) {
     	//Rate Us
-		$url = '<a href="https://wordpress.org/support/plugin/multislot-business-hours-for-dokan-vendor/reviews/#new-post" target="_blank" class="help-link">'.__( 'Rate', 'doc' ).'</a>';
+		$url = '<a style="color: #DD5E3B;font-weight: bold;" href="https://wordpress.org/support/plugin/multislot-business-hours-for-dokan-vendor/reviews/#new-post" target="_blank" class="help-link">'.__( 'Rate', 'doc' ).'</a>';
 		array_push(
 			$links,
 			$url
 		);
 		//Feature Request
-		$url = '<a href="https://cybercraftit.com/contact" target="_blank" class="help-link">'.__( 'Request for feature', 'doc').'</a>';
+		$url = '<a style="color: #DD5E3B;font-weight: bold;" href="https://cybercraftit.com/contact" target="_blank" class="help-link">'.__( 'Request for feature', 'doc').'</a>';
 		array_push(
 			$links,
 			$url
 		);
 		//report issue
-		$url = '<a href="https://github.com/mithublue/dokan-multislot-business-hours/issues/new" target="_blank" class="help-link">'.__( 'Report issue', 'doc' ).'</a>';
+		$url = '<a style="color: #DD5E3B;font-weight: bold;" href="https://github.com/mithublue/dokan-multislot-business-hours/issues/new" target="_blank" class="help-link">'.__( 'Report issue', 'doc' ).'</a>';
 		array_push(
 			$links,
 			$url
 		);
 		return $links;
+	}
+
+	public function on_active() {
+		$dokan_appearance = get_option( 'dokan_appearance' );
+		!is_array( $dokan_appearance ) ? $dokan_appearance = [] : '';
+		$dokan_appearance['store_open_close'] = 'off';
+		$dokan_appearance['doc_multislot_time_enabled'] = 'on';
+		update_option( 'dokan_appearance', $dokan_appearance );
 	}
 }
 
