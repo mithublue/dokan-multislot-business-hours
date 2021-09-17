@@ -3,7 +3,7 @@
 	Plugin Name: Multislot Business Hours for Dokan Vendor
 	Plugin URI:
 	Description: Maintain Business hours for your WooCommerce Shop. Let your customers know about business schedules.
-	Version: 1.0
+	Version: 1.0.1
 	Text Domain: doc
 	Author: CyberCraft
 	Author URI: http://cybercraftit.com/
