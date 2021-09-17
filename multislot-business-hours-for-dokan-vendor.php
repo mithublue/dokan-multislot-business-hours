@@ -71,11 +71,34 @@ class DOC {
     }
 
     public function __construct() {
+	    add_filter( 'plugin_action_links_multislot-business-hours-for-dokan-vendor/multislot-business-hours-for-dokan-vendor.php', [ $this, 'plugin_links' ] );
     	include_once 'core/promo.php';
     	Store::instance();
     	Widget_Actions::instance();
     	Store_Settings::instance();
     }
+
+	function plugin_links( $links ) {
+    	//Rate Us
+		$url = '<a href="https://wordpress.org/support/plugin/multislot-business-hours-for-dokan-vendor/reviews/#new-post" target="_blank" class="help-link">'.__( 'Rate', 'doc' ).'</a>';
+		array_push(
+			$links,
+			$url
+		);
+		//Feature Request
+		$url = '<a href="https://cybercraftit.com/contact" target="_blank" class="help-link">'.__( 'Request for feature', 'doc').'</a>';
+		array_push(
+			$links,
+			$url
+		);
+		//report issue
+		$url = '<a href="https://github.com/mithublue/dokan-multislot-business-hours/issues/new" target="_blank" class="help-link">'.__( 'Report issue', 'doc' ).'</a>';
+		array_push(
+			$links,
+			$url
+		);
+		return $links;
+	}
 }
 
 DOC::instance();
