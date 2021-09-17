@@ -13,6 +13,7 @@
 
 namespace DOC;
 
+use DOC\core\Functions;
 use DOC\core\Store;
 use DOC\core\Store_Settings;
 use DOC\core\Widget_Actions;
@@ -70,6 +71,7 @@ class DOC {
     }
 
     public function __construct() {
+    	include_once 'core/promo.php';
     	Store::instance();
     	Widget_Actions::instance();
     	Store_Settings::instance();

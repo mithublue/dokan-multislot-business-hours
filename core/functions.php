@@ -1,6 +1,8 @@
 <?php
 namespace DOC\core;
 
+use DOCPRO\DOC_Pro;
+
 class Functions{
 
     /**
@@ -31,10 +33,6 @@ class Functions{
             self::$_instance = new self();
         }
         return self::$_instance;
-
-    }
-
-    public function __construct() {
 
     }
 
@@ -103,5 +101,12 @@ class Functions{
 		}
 
 		return $str = trim( $str, '/' );
+	}
+
+	public function is_pro() {
+    	if ( class_exists( DOC_Pro::class  )) {
+    		return true;
+		}
+		return false;
 	}
 }
