@@ -36,9 +36,11 @@ class Functions{
 
     }
 
-	function is_store_open( $user_id ) {
-		$store_user = dokan()->vendor->get( $user_id );
-		$store_info = $store_user->get_shop_info();
+	function is_store_open( $user_id, $store_info = null ) {
+		if ( ! $store_info ) {
+			$store_user = dokan()->vendor->get( $user_id );
+			$store_info = $store_user->get_shop_info();
+		}
 		$open_days  = isset( $store_info['dokan_store_time'] ) ? $store_info['dokan_store_time'] : '';
 
 		$current_time = dokan_current_datetime();
