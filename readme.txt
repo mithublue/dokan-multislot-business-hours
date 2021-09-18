@@ -32,6 +32,10 @@ for each day.
 
 * Option for vendor to manage notice
 
+* Show store notice badge in product list page
+
+* Show store notice badge in single product page
+
 * And more...
 
 Demo
