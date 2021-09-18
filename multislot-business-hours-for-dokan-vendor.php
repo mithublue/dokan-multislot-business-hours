@@ -1,6 +1,6 @@
 <?php
 /*
-	Plugin Name: Multislot Business Hours for Dokan Vendor
+	Plugin Name: Multislot Business Hours for Dokan Vendor - create multiple opening and closing time for vendor's store on each day
 	Plugin URI:
 	Description: Maintain Business hours for your WooCommerce Shop. Let your customers know about business schedules.
 	Version: 1.0.1
