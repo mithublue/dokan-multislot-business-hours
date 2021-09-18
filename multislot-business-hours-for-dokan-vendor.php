@@ -14,6 +14,7 @@
 namespace DOC;
 
 use DOC\core\Functions;
+use DOC\core\Product_Actions;
 use DOC\core\Store;
 use DOC\core\Store_Settings;
 use DOC\core\Widget_Actions;
@@ -62,7 +63,7 @@ class DOC {
      * @return ${ClassName} An instance of the class.
      */
     public static function instance() {
-
+    	Product_Actions::instance();
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
         }
