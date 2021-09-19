@@ -6,7 +6,7 @@ Tested up to: 5.8.1
 WC requires at least: 3.0
 WC tested up to: 5.6.0
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,13 +36,40 @@ for each day.
 
 * Show store notice badge in single product page
 
+* Sellers can block the closed shop notice in their store by an option provided in the store settings.
+
+* Custom store time widget instead of Dokan's default one.
+
+* Seller can set or deactiave store notice for his store.
+
+* Empty cart automatically when the store of that product becomes close (option is in the admin panel to make it active)
+
+* Pro support 24/7
+
+* Pro updates
+
 * And more...
 
-Demo
+Demo ( Both free and pro )
 
 https://cybercraftit.com/demo/testwp/dokan-business-hours/
 user : test
 password: 123456
+
+= Pro =
+
+<a href="https://cybercraftit.com/product/dokan-multislot-business-hours-for-vendors/" target="_blank">You can find pro version here</a>
+
+Please note that, Pro version is one time purchase, which means you don't need to renew the code every year by recurring payment, just pay once and the code
+is yours. It also includes 3 months pro support for free with it.
+
+= License Key for Pro Version =
+
+If you already have the pro extension already, and the 3 months pro support already exceeds, you can purchase the license key for 30 days to get the
+update and pro support for that time. You do not need to purchase the product again. :)
+
+<a href="https://cybercraftit.com/product/license-key-for-multislot-business-hours-for-dokan-vendor-pro/" target="_blank">You can purhcase the license key from here</a>
+
 
 == Screenshots ==
 
