@@ -52,7 +52,8 @@ for each day.
 
 Demo ( Both free and pro )
 
-https://cybercraftit.com/demo/testwp/dokan-business-hours/
+<a href="https://cybercraftit.com/demo/testwp/dokan-business-hours/" target="_blank">You can try the demo from here</a>
+
 user : test
 password: 123456
 
