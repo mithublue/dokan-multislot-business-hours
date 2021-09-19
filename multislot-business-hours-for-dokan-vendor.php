@@ -99,6 +99,15 @@ class DOC {
 			$links,
 			$url
 		);
+		//get pro
+		if ( ! Functions::instance()->is_pro() ) {
+			$url = '<a style="background: #DD5E3B; color: #ffffff; padding: 0 10px 1px 10px; font-weight: bold;" href="https://cybercraftit.com/product/dokan-multislot-business-hours-for-vendors/" target="_blank" class="help-link">'.__( 'GET PRO', 'doc' ).'</a>';
+			array_push(
+				$links,
+				$url
+			);
+		}
+
 		return $links;
 	}
 
