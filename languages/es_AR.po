@@ -1,0 +1,221 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Multislot Business Hours for Dokan Vendor - create "
+"multiple opening and closing time for vendor's store on each day\n"
+"POT-Creation-Date: 2021-09-27 13:53+0600\n"
+"PO-Revision-Date: 2021-09-27 15:42+0600\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: multislot-business-hours-for-dokan-vendor.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: es_AR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: core/StoreOpenClose.php:23
+msgid "Dokan Store Multislot Opening Closing Time"
+msgstr ""
+"Habilitar el widget de horario de cierre de apertura de tienda de múltiples "
+"ranuras"
+
+#: core/StoreOpenClose.php:25
+msgid "Dokan Multislot Business Hours: Store Opening Closing Time Widget"
+msgstr ""
+"Horario comercial de Dokan Multislot: widget de horario de cierre de "
+"apertura de la tienda"
+
+#: core/StoreOpenClose.php:41 core/StoreOpenClose.php:130
+msgid "Store Time"
+msgstr "Tiempo de almacenamiento"
+
+#: core/StoreOpenClose.php:137
+msgid "Title:"
+msgstr "Título:"
+
+#: core/promo.php:7
+msgid "Customer Cannot Purchase the product on Store Close (PRO)"
+msgstr "El cliente no puede comprar el producto al cerrar la tienda (PRO)"
+
+#: core/promo.php:8
+msgid ""
+"Check this if you want customer to not being able to purchase product from a "
+"closed store."
+msgstr ""
+"Marque esto si desea que el cliente no pueda comprar productos en una tienda "
+"cerrada."
+
+#: core/promo.php:14 core/promo.php:26
+msgid "Show Notice When User Visit Closed Store (PRO)"
+msgstr "Mostrar aviso cuando el usuario visite la tienda cerrada (PRO)"
+
+#: core/promo.php:15 core/promo.php:27
+msgid "This notice will be shown, when an user visit a closed store"
+msgstr "Este aviso se mostrará cuando un usuario visite una tienda cerrada"
+
+#: core/promo.php:17
+msgid "Select page"
+msgstr "Seleccionar página"
+
+#: core/promo.php:19 core/promo.php:31
+msgid "None"
+msgstr "Ninguno"
+
+#: core/promo.php:20 core/promo.php:32
+msgid "Banner"
+msgstr "Bandera"
+
+#: core/promo.php:21 core/promo.php:33
+msgid "Popup"
+msgstr "Surgir"
+
+#: core/promo.php:29
+msgid "Select Notice Type"
+msgstr "Seleccione el tipo de aviso"
+
+#: core/promo.php:38
+msgid "Closed Notice Text (PRO)"
+msgstr "Texto de aviso cerrado (PRO)"
+
+#: core/promo.php:41
+msgid "Store is closed for now"
+msgstr "La tienda está cerrada por ahora"
+
+#: core/promo.php:42
+msgid ""
+"This text will be shown as notice for closed store, if notice is chosen to "
+"show"
+msgstr ""
+"Este texto se mostrará como aviso para tienda cerrada, si se elige el aviso "
+"para mostrar"
+
+#: core/promo.php:46
+msgid "Allow Vendor to Control Visibility of Notice (PRO)"
+msgstr "Permitir al vendedor controlar la visibilidad de la notificación (PRO)"
+
+#: core/promo.php:47
+msgid ""
+"Check this if you want vendors to have the control to turn off/on notice in "
+"their store."
+msgstr ""
+"Marque esto si desea que los proveedores tengan el control para apagar / "
+"encender el aviso en su tienda."
+
+#: core/promo.php:53
+msgid "Remove Product from Cart on Store Closes (PRO)"
+msgstr "Eliminar producto del carrito al cerrar la tienda (PRO)"
+
+#: core/promo.php:54
+msgid ""
+"Check this if you want products to be removed from customer's cart if the "
+"store of that product gets closed."
+msgstr ""
+"Marque esto si desea que los productos se eliminen del carrito del cliente "
+"si la tienda de ese producto se cierra."
+
+#: core/store-settings.php:102
+msgid "Enable Multislot Store Opening Closing Time Widget"
+msgstr ""
+"Habilitar el widget de horario de cierre de apertura de tienda de múltiples "
+"ranuras"
+
+#: core/store-settings.php:103
+msgid ""
+"Enable multislot store opening & closing time widget in the store sidebar "
+"provided by Dokan Open Closed Plugin."
+msgstr ""
+"Habilite el widget de hora de apertura y cierre de la tienda de múltiples "
+"ranuras en la barra lateral de la tienda proporcionada por el complemento "
+"Dokan Open Closed."
+
+#: core/store-settings.php:120
+msgid "Store Opening Closing Time"
+msgstr "Hora de cierre de apertura de la tienda"
+
+#: core/store-settings.php:128
+msgid "Show store opening closing time widget in store page"
+msgstr ""
+"Mostrar el widget de hora de cierre de apertura de la tienda en la página de "
+"la tienda"
+
+#: core/store-settings.php:149
+msgid "Close"
+msgstr "Cerrar"
+
+#: core/store-settings.php:152
+msgid "Open"
+msgstr "Abierto"
+
+#: core/store-settings.php:180
+msgid "Store Open Notice"
+msgstr "Aviso de apertura de tienda"
+
+#: core/store-settings.php:183
+msgid "Store is open"
+msgstr "La tienda está abierta"
+
+#: core/store-settings.php:188
+msgid "Store Close Notice"
+msgstr "Aviso de cierre de tienda"
+
+#: core/store-settings.php:191
+msgid "Store is closed"
+msgstr "La tienda está cerrada"
+
+#: core/store.php:46
+msgid "Store Open"
+msgstr "Tienda abierta"
+
+#: core/store.php:47
+msgid "Store Closed"
+msgstr "Tienda cerrada"
+
+#: multislot-business-hours-for-dokan-vendor.php:97
+msgid "Rate"
+msgstr "Índice"
+
+#: multislot-business-hours-for-dokan-vendor.php:103
+msgid "Request for feature"
+msgstr "Solicitud de función"
+
+#: multislot-business-hours-for-dokan-vendor.php:109
+msgid "Report issue"
+msgstr "Informar problema"
+
+#: multislot-business-hours-for-dokan-vendor.php:116
+msgid "GET PRO"
+msgstr "OBTENER PRO"
+
+#. Plugin Name of the plugin/theme
+msgid ""
+"Multislot Business Hours for Dokan Vendor - create multiple opening and "
+"closing time for vendor's store on each day"
+msgstr ""
+"Horario comercial de múltiples ranuras para el proveedor de Dokan: cree "
+"múltiples horarios de apertura y cierre para la tienda del proveedor todos "
+"los días"
+
+#. Description of the plugin/theme
+msgid ""
+"Maintain Business hours for your WooCommerce Shop. Let your customers know "
+"about business schedules."
+msgstr ""
+"Mantenga el horario comercial de su tienda WooCommerce. Informe a sus "
+"clientes sobre los horarios comerciales."
+
+#. Author of the plugin/theme
+msgid "CyberCraft"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://cybercraftit.com/"
+msgstr ""

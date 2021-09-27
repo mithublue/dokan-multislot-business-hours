@@ -8,6 +8,7 @@
 	Author: CyberCraft
 	Author URI: http://cybercraftit.com/
 	License: GPLv2 or later
+    Domain Path: /languages/
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
@@ -72,6 +73,9 @@ class DOC {
     }
 
     public function __construct() {
+	    // Localize our plugin
+	    add_action( 'init', [ $this, 'localization_setup' ] );
+
     	register_activation_hook( __FILE__, [ $this, 'on_active' ] );
 	    add_filter( 'plugin_action_links_multislot-business-hours-for-dokan-vendor/multislot-business-hours-for-dokan-vendor.php', [ $this, 'plugin_links' ] );
     	include_once 'core/promo.php';
@@ -79,6 +83,15 @@ class DOC {
     	Widget_Actions::instance();
     	Store_Settings::instance();
     }
+
+	/**
+	 * Initialize plugin for localization
+	 *
+	 * @uses load_plugin_textdomain()
+	 */
+	public function localization_setup() {
+		load_plugin_textdomain( 'doc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	}
 
 	function plugin_links( $links ) {
     	//Rate Us
