@@ -37,6 +37,7 @@ class Product_Actions{
 
     public function __construct() {
     	add_action( 'woocommerce_before_add_to_cart_form', [ $this, 'add_store_notice_badge'] );
+    	add_action( 'dokan_seller_listing_footer_content', [ $this, 'add_store_notice_badge_in_store_list'], 10, 2 );
 	    add_action( 'pre_get_posts', [ $this, 'pre_get_posts']);
 	    add_filter( 'posts_fields', [ $this, 'posts_fields' ], 10, 2 );
 	    add_filter( 'posts_join', [ $this, 'posts_join' ], 10, 2 );
@@ -107,13 +108,25 @@ class Product_Actions{
     	global $product;
     	$vendor = dokan_get_vendor_by_product( $product );
     	$vendor_info = dokan_get_store_info( $vendor->id );
-    	if ( Functions::instance()->is_store_open( $vendor->id ) ) {
-    		?>
-		    <span class="doc-store-notice doc-store-notice-open"><?php echo esc_attr( $vendor_info['dokan_store_open_notice'] ); ?></span>
-<?php
-	    } elseif ( ! Functions::instance()->is_store_open( $vendor->id ) ) {
+		if ( Functions::instance()->is_store_open( $vendor->id ) ) {
+			?>
+			<span class="doc-store-notice doc-store-notice-open"><?php echo esc_attr( $vendor_info['dokan_store_open_notice'] ); ?></span>
+			<?php
+		} elseif ( ! Functions::instance()->is_store_open( $vendor->id ) ) {
+			?>
+			<span class="doc-store-notice doc-store-notice-close"><?php echo esc_attr( $vendor_info['dokan_store_close_notice'] ); ?></span>
+			<?php
+		}
+    }
+
+    public function add_store_notice_badge_in_store_list( $seller, $store_info ) {
+	    if ( Functions::instance()->is_store_open( $seller->ID ) ) {
 		    ?>
-		    <span class="doc-store-notice doc-store-notice-close"><?php echo esc_attr( $vendor_info['dokan_store_close_notice'] ); ?></span>
+		    <span class="doc-store-notice doc-store-notice-open"><?php echo esc_attr( $store_info['dokan_store_open_notice'] ); ?></span>
+		    <?php
+	    } elseif ( ! Functions::instance()->is_store_open( $seller->ID ) ) {
+		    ?>
+		    <span class="doc-store-notice doc-store-notice-close"><?php echo esc_attr( $store_info['dokan_store_close_notice'] ); ?></span>
 		    <?php
 	    }
     }
