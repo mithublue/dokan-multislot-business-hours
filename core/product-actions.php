@@ -123,6 +123,13 @@ class Product_Actions{
 	    if ( Functions::instance()->is_store_open( $seller->ID ) ) {
 		    ?>
 		    <span class="doc-store-notice doc-store-notice-open"><?php echo esc_attr( $store_info['dokan_store_open_notice'] ); ?></span>
+		    <span>
+			    <?php
+			    if ( isset( $store_info['dokan_store_time'][strtolower( date('l') )] ) ) {
+				    echo Functions::instance()->get_time_ranges_string( $store_info['dokan_store_time'][strtolower( date('l') )] );
+			    }
+			    ?>
+		    </span>
 		    <?php
 	    } elseif ( ! Functions::instance()->is_store_open( $seller->ID ) ) {
 		    ?>
