@@ -56,19 +56,15 @@ class Functions{
 		$is_filled_data = 0;
 
 		if ( 'open' === $status ) {
-			foreach ( $schedule as $key => $time ) {
-				if ( strpos( $key, 'opening_time' ) !== false ) {
-					if ( $time ) $is_filled_data++;
-					$time_key = (int) filter_var( $key, FILTER_SANITIZE_NUMBER_INT);
-					$time_key = ( $time_key ? '_'.$time_key : '' );
-					$opening_key = 'opening_time'. $time_key;
-					$closing_key = 'closing_time' . $time_key;
-					$open  = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule[$opening_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
-					$close = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule[$closing_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
 
-					if ( $open <= $current_time && $close >= $current_time ) {
-						return true;
-					}
+			foreach ( $schedule['opening_time'] as $key => $time ) {
+				if ( $time ) $is_filled_data++;
+				$opening_key = $key;
+				$closing_key = $key;
+				$open  = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule['opening_time'][$opening_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
+				$close = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule['closing_time'][$closing_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
+				if ( $open <= $current_time && $close >= $current_time ) {
+					return true;
 				}
 			}
 
@@ -84,21 +80,15 @@ class Functions{
 		$is_filled_data = 0;
 		$str = '';
     	if ( 'open' === $schedule['status'] ) {
-			foreach ( $schedule as $key => $time ) {
-				if ( strpos( $key, 'opening_time' ) !== false ) {
-					if ( $time ) $is_filled_data++;
-					$time_key = (int) filter_var( $key, FILTER_SANITIZE_NUMBER_INT);
-					$time_key = ( $time_key ? '_'.$time_key : '' );
-					$opening_key = 'opening_time'. $time_key;
-					$closing_key = 'closing_time' . $time_key;
-					$open  = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule[$opening_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
-					$close = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule[$closing_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
-					$open = $open ? date( 'H:i:s', $open->getTimestamp() ) : '';
-					$close = $close ? date('H:i:s', $close->getTimestamp() ) : '';
-
-					$str .= $open . '-' . $close.'/';
-					//$str .= ( $open ? date( 'H:i:s', $open->getTimestamp() ) : '' ) . '-' . ( $close ? date('H:i:s', $close->getTimestamp() . '/' ) : '' );
-				}
+			foreach ( $schedule['opening_time'] as $key => $time ) {
+				if ( $time ) $is_filled_data++;
+				$opening_key = $key;
+				$closing_key = $key;
+				$open  = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule['opening_time'][$opening_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
+				$close = \DateTimeImmutable::createFromFormat( esc_attr( get_option( 'time_format' ) ), $schedule['closing_time'][$closing_key], new \DateTimeZone( dokan_wp_timezone_string() ) );
+				$open = $open ? date( 'H:i:s', $open->getTimestamp() ) : '';
+				$close = $close ? date('H:i:s', $close->getTimestamp() ) : '';
+				$str .= $open . '-' . $close.'/';
 			}
 		}
 
